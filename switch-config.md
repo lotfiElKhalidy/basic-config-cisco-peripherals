@@ -55,3 +55,47 @@ $ S1(config-if)# end
 ```
 $ S1# copy running-config startup-config
 ```
+
+## Commandes de vérification des commutateurs
+
+- Activer l'auto-MDIX
+- Lorsque la fonction auto-MDIX est activée, l'interface détecte automatiquement le type de connexion de câble requis (droit ou croisé) et configure la connexion de manière appropriée
+```
+$ S1(config-if)# mdix auto
+```
+- Examiner le paramètre Auto-MDIX pour une interface spécifique
+```
+$ S1# show controllers ethernet-controller interface_name phy | include MDIX
+```
+- Afficher l'état et la configuration des interfaces.
+```
+$ S1# show interfaces [interface-id]
+```
+- Afficher la configuration initiale actuelle.
+```
+$ S1# show startup-config
+```	
+- Afficher la configuration courante.
+```
+$ S1# show running-config
+```
+- Afficher les informations sur le système de fichiers Flash.
+```
+$ S1# show flash
+```
+- Afficher l'état matériel et logiciel du système.
+```
+$ S1# show version
+```
+- Afficher l'historique de la commande saisie.
+```
+$ S1# show history
+```
+- Afficher les informations IP d'une interface.
+```
+$ S1# show ip interface [interface-id] OU S1# show ipv6 interface [interface-id]
+```
+- Afficher la table d'adresses MAC.	
+```
+$ S1# show mac-address-table OU S1# show mac address-table
+```
